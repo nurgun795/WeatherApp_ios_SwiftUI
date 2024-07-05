@@ -46,10 +46,17 @@ struct HomeView: View {
                         .offset(y: -bottomSheetTranslationProrated * imageOffset)
                     
                     // MARK: Current Weather
-                    VStack(spacing: -10 * (1 - bottomSheetTranslationProrated)) {
-                        Text("Montreal")
+                    VStack(spacing: -40 * (1 - bottomSheetTranslationProrated)) {
+                        Text("Nurgun")
                             .font(.largeTitle)
+                        Image("MyPic")
+                            .cornerRadius(30)
+        
+                        .padding(.leading, 300)
+                    
+                           
                         
+                         
                         VStack {
      
                             Text(attributedString)
@@ -57,10 +64,12 @@ struct HomeView: View {
                             Text("H:24° L:18°")
                                 .font(.title3.weight(.semibold))
                                 .opacity(1 - bottomSheetTranslationProrated)
+                                
                         }
                         
                         Spacer()
                     }
+                 
                     .padding(.top, 51)
                     .offset(y: -bottomSheetTranslationProrated * 46)
                     
